@@ -1,7 +1,9 @@
+import { UrlShortenerForm } from "./components/UrlShortenerForm";
+
 export default function Home(){
   return (
-    <div>
-      HOME
-    </div>
+    <>
+     <UrlShortenerForm/>
+    </>
   )
 }

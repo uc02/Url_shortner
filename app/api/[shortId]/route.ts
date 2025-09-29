@@ -29,7 +29,7 @@ export async function GET(
       )
     }
     // console.log(urlExist)
-    return NextResponse.redirect(new URL(urlExist.originalUrl))
+    return NextResponse.json({ originalUrl: urlExist.originalUrl })
 
   } catch (error) {
     return NextResponse.json(
