@@ -24,6 +24,17 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
+    
+    const OriginalUrl_Exist = await Url.findOne({
+      originalUrl: body.originalUrl
+    })
+
+    if(OriginalUrl_Exist){
+      return NextResponse.json({
+        shortUrl: OriginalUrl_Exist.shortUrl,
+        status: 200
+      })
+    }
 
     const shortCode = generateUniqueShortCode();
 

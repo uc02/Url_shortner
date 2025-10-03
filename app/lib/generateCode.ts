@@ -1,5 +1,5 @@
 const BASE62 = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const CODE_LENGTH = 6;
+const CODE_LENGTH = 4;
 
 export function generateUniqueShortCode(): string {
   let result = ''
