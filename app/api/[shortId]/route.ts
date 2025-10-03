@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import dbconnect from "../../lib/dbconnect";
 import Url from "../../models/UrlSchema";
 
-
-
 export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ shortId: string }> }

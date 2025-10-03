@@ -2,6 +2,7 @@
 
 import DOMPurify from "dompurify";
 import { useState } from "react";
+import { copyToclipboard } from "./CopyClipboard";
 
 export const UrlShortenerForm = () => {
   const [url, setUrl] = useState("");
@@ -108,7 +109,8 @@ export const UrlShortenerForm = () => {
             rel="noopener noreferrer"
           >
             {DOMPurify.sanitize(shortUrl)}
-          </a>
+          </a>{' '}
+          <button onClick={() => copyToclipboard(shortUrl)} className="border bg-blue-400 text-white rounded-xl p-1">copy</button>
         </p>
           )}
         </div>
