@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
 
     const shortCode = generateUniqueShortCode();
 
-    const shortUrl  = `${process.env.URL}/${shortCode}`;
+    const shortUrl  = `https://url-shortner-five-rho.vercel.app/${shortCode}`;
 
     const newUrl : IUrl  = await Url.create({
       originalUrl: body.originalUrl,
